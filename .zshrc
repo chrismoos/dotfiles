@@ -6,7 +6,7 @@ colors
 
 #autoload -U promptinit
 #promptinit
-
+unamestr=$(uname)
 
 export HISTSIZE=2000
 export HISTFILE="$HOME/.zshhistory"
@@ -14,7 +14,11 @@ export SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
-alias ls="ls -G"
+if [[ "$unamestr" == "Darwin" ]]; then
+	alias ls="ls -G"
+else
+	alias ls="ls --color"
+fi
 alias reload_zsh="source ~/.zshrc"
 
 bindkey -v
