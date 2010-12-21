@@ -21,6 +21,10 @@ else
 fi
 alias reload_zsh="source ~/.zshrc"
 
+# Fix LSCOLORS
+export LSCOLORS=DxGxcxdxCxegedabagacad
+
+
 bindkey -v
 
 setopt prompt_subst 
