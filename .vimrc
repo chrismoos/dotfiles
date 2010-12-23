@@ -17,3 +17,4 @@ match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces hi
 set listchars=tab:>-,trail:.,extends:>
 
 nmap <silent> <leader>l :set list!<CR>
+map ,ws :%s/\s\+$//e<CR>
