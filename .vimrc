@@ -18,3 +18,7 @@ set listchars=tab:>-,trail:.,extends:>
 
 nmap <silent> <leader>l :set list!<CR>
 map ,ws :%s/\s\+$//e<CR>
+
+map ,gp :Gist -p<CR>
+map ,gst :Gist<CR>
+map ,ga :Gist -a<CR>
