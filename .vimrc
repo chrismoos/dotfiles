@@ -22,3 +22,4 @@ map ,ws :%s/\s\+$//e<CR>
 map ,gp :Gist -p<CR>
 map ,gst :Gist<CR>
 map ,ga :Gist -a<CR>
+noremap ,bc :s#^#//<CR>
