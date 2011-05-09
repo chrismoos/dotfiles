@@ -8,6 +8,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+autocmd FileType java set tabstop=4|set shiftwidth=4
+autocmd BufRead,BufNewFile *.ejs set filetype=html
+
 map ,t :FuzzyFinderFile **/<CR>
 map ,f :FuzzyFinderFile<CR>
 map ,rc :FuzzyFinderRenewCache<CR>

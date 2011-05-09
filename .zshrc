@@ -8,6 +8,7 @@ colors
 #promptinit
 unamestr=$(uname)
 
+export EDITOR="/usr/bin/vim"
 export HISTSIZE=2000
 export HISTFILE="$HOME/.zshhistory"
 export SAVEHIST=$HISTSIZE
