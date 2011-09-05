@@ -50,3 +50,7 @@ vcs_info_wrapper() {
 }
 RPROMPT=$'$(vcs_info_wrapper)'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+if [ -e ~/.profile ]; then
+  source ~/.profile
+fi
