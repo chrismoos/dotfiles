@@ -2,6 +2,7 @@ syntax on
 colorscheme desert
 set number
 
+filetype plugin on
 set smartindent
 set autoindent
 set expandtab
@@ -30,3 +31,4 @@ noremap ,bc :s#^#//<CR>
 noremap ,cf :echo expand("%:p")<CR>
 
 autocmd FileType make setlocal noexpandtab
+set guifont=Monaco:h14
