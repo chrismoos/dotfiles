@@ -30,5 +30,7 @@ map ,ga :Gist -a<CR>
 noremap ,bc :s#^#//<CR>
 noremap ,cf :echo expand("%:p")<CR>
 
+noremap ,nt :NERDTreeToggle<CR>
+
 autocmd FileType make setlocal noexpandtab
 set guifont=Monaco:h14
