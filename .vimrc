@@ -1,5 +1,5 @@
 syntax on
-colorscheme desert
+colorscheme koehler
 set number
 
 filetype plugin on
