@@ -34,3 +34,7 @@ noremap ,nt :NERDTreeToggle<CR>
 
 autocmd FileType make setlocal noexpandtab
 set guifont=Monaco:h14
+
+augroup filetype
+   au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
