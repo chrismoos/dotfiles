@@ -33,7 +33,7 @@ noremap ,cf :echo expand("%:p")<CR>
 noremap ,nt :NERDTreeToggle<CR>
 
 autocmd FileType make setlocal noexpandtab
-set guifont=Monaco:h14
+set guifont=Monaco:h16
 
 augroup filetype
    au! BufRead,BufNewFile *.proto setfiletype proto
