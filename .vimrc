@@ -1,8 +1,9 @@
 syntax on
-colorscheme koehler
+colorscheme ir_black-256
 set number
 
 filetype plugin on
+filetype plugin indent on
 set smartindent
 set autoindent
 set expandtab
@@ -11,6 +12,9 @@ set shiftwidth=4
 
 autocmd FileType java set tabstop=4|set shiftwidth=4
 autocmd BufRead,BufNewFile *.ejs set filetype=html
+
+let g:FuzzyFinderOptions = { 'Base':{}, 'Buffer':{}, 'File':{}, 'Dir':{}, 'MruFile':{}, 'MruCmd':{}, 'Tag':{}, 'TaggedFile':{}}
+let g:FuzzyFinderOptions.File.excluded_path = '\v\~$|\.o$|\.DS_Store$|\.jpg$|\.gif$|\.png$|\.bak$|\.swp$|\.git$|\.svn$|gen|\.git|\.gradle|build/'
 
 map ,t :FuzzyFinderFile **/<CR>
 map ,f :FuzzyFinderFile<CR>
@@ -38,3 +42,7 @@ set guifont=Monaco:h16
 augroup filetype
    au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
+
+set backupdir=~/.vim/backup/
+set directory=~/.vim/backup/
+

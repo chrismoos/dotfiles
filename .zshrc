@@ -54,3 +54,5 @@ RPROMPT=$'$(vcs_info_wrapper)'
 if [ -e ~/.profile ]; then
   source ~/.profile
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
