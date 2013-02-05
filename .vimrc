@@ -1,6 +1,9 @@
 syntax on
-colorscheme ir_black-256
+colorscheme jellybeans
 set number
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
 filetype plugin on
 filetype plugin indent on
@@ -45,4 +48,3 @@ augroup end
 
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
-
