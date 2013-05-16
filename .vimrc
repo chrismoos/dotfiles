@@ -1,15 +1,24 @@
 syntax on
 colorscheme jellybeans
 set number
+set smartindent
+set autoindent
+set expandtab
+
+filetype off
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-filetype plugin on
+Bundle 'instant-markdown'
+Bundle 'cocoa.vim'
+Bundle 'vim-jade'
+Bundle 'vim-javascript'
+Bundle 'vim-fugitive'
+Bundle 'smali-vim'
+
 filetype plugin indent on
-set smartindent
-set autoindent
-set expandtab
+
 set tabstop=4
 set shiftwidth=4
 
@@ -48,3 +57,18 @@ augroup end
 
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
+
+let g:acp_behaviorJavaEclimLength = 3
+function MeetsForJavaEclim(context)
+  return g:acp_behaviorJavaEclimLength >= 0 &&
+        \ a:context =~ '\k\.\k\{' . g:acp_behaviorJavaEclimLength . ',}$'
+endfunction
+let g:acp_behavior = {
+    \ 'java': [{
+      \ 'command': "\<c-x>\<c-u>",
+      \ 'completefunc' : 'eclim#java#complete#CodeComplete',
+      \ 'meets'        : 'MeetsForJavaEclim',
+    \ }]
+  \ }
+
+let g:instant_markdown_slow = 1
