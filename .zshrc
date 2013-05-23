@@ -56,3 +56,9 @@ if [ -e ~/.profile ]; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+if [[ $ZSH_ENV_FILE != '' ]]; then
+    source $ZSH_ENV_FILE
+fi
