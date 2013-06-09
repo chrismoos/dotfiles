@@ -14,15 +14,18 @@ Bundle 'instant-markdown'
 Bundle 'cocoa.vim'
 Bundle 'vim-jade'
 Bundle 'vim-javascript'
+Bundle 'vim-javascript-syntax'
 Bundle 'vim-fugitive'
 Bundle 'smali-vim'
 Bundle 'vim-golang'
 Bundle 'ctrlp.vim'
+Bundle 'YouCompleteMe'
 
 filetype plugin indent on
 
 set tabstop=4
 set shiftwidth=4
+let mapleader=","
 
 autocmd FileType java set tabstop=4|set shiftwidth=4
 autocmd BufRead,BufNewFile *.ejs set filetype=html
@@ -126,3 +129,14 @@ if exists("+showtabline")
     set stal=2
     set tabline=%!MyTabLine()
 endif
+
+" window
+nmap <leader>swh  :topleft  vnew<CR>
+nmap <leader>swl :botright vnew<CR>
+nmap <leader>swk    :topleft  new<CR>
+nmap <leader>swj  :botright new<CR>
+" buffer
+nmap <leader>sh   :leftabove  vnew<CR>
+nmap <leader>sl  :rightbelow vnew<CR>
+nmap <leader>sk     :leftabove  new<CR>
+nmap <leader>sj   :rightbelow new<CR>
