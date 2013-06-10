@@ -19,3 +19,12 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/bundle/clang_complete"]
+	path = .vim/bundle/clang_complete
+	url = git://github.com/Rip-Rip/clang_complete.git
+[submodule ".vim/bundle/gist-vim"]
+	path = .vim/bundle/gist-vim
+	url = git://github.com/mattn/gist-vim.git
+[submodule ".vim/bundle/webapi-vim"]
+	path = .vim/bundle/webapi-vim
+	url = git://github.com/mattn/webapi-vim.git

@@ -19,7 +19,8 @@ Bundle 'vim-fugitive'
 Bundle 'smali-vim'
 Bundle 'vim-golang'
 Bundle 'ctrlp.vim'
-Bundle 'YouCompleteMe'
+Bundle 'webapi-vim'
+Bundle 'gist-vim'
 
 filetype plugin indent on
 
@@ -140,3 +141,7 @@ nmap <leader>sh   :leftabove  vnew<CR>
 nmap <leader>sl  :rightbelow vnew<CR>
 nmap <leader>sk     :leftabove  new<CR>
 nmap <leader>sj   :rightbelow new<CR>
+
+let g:gist_post_private = 1
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
