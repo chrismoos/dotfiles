@@ -60,6 +60,7 @@ augroup filetype
 augroup end
 
 set backupdir=~/.vim/backup/
+set backspace=indent,eol,start
 set directory=~/.vim/backup/
 
 let g:acp_behaviorJavaEclimLength = 3
