@@ -10,6 +10,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'nerdtree'
 Bundle 'instant-markdown'
 Bundle 'cocoa.vim'
 Bundle 'vim-jade'
@@ -21,6 +22,7 @@ Bundle 'vim-golang'
 Bundle 'ctrlp.vim'
 Bundle 'webapi-vim'
 Bundle 'gist-vim'
+Bundle 'vim-coffee-script'
 
 filetype plugin indent on
 
@@ -51,6 +53,8 @@ map ,gst :Gist<CR>
 map ,ga :Gist -a<CR>
 noremap ,bc :s#^#//<CR>
 noremap ,cf :echo expand("%:p")<CR>
+
+map ,nt :NERDTree<CR>
 
 autocmd FileType make setlocal noexpandtab
 set guifont=Monaco:h16
@@ -146,3 +150,7 @@ nmap <leader>sj   :rightbelow new<CR>
 let g:gist_post_private = 1
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
+
+map <leader>gs :InsertBothGetterSetter<CR>
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
