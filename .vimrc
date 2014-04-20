@@ -1,5 +1,4 @@
 syntax on
-colorscheme jellybeans
 set number
 set smartindent
 set autoindent
@@ -23,6 +22,14 @@ Bundle 'ctrlp.vim'
 Bundle 'webapi-vim'
 Bundle 'gist-vim'
 Bundle 'vim-coffee-script'
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
+Bundle 'https://github.com/saltstack/salt-vim.git'
+"Bundle 'https://github.com/vim-scripts/aftersyntaxc.vim.git'
+
+"let g:solarized_termcolors=256
+"colorscheme jellybeans
+colorscheme solarized
+set background=dark
 
 filetype plugin indent on
 
