@@ -24,12 +24,22 @@ Bundle 'gist-vim'
 Bundle 'vim-coffee-script'
 Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 Bundle 'https://github.com/saltstack/salt-vim.git'
+Bundle 'https://github.com/elzr/vim-json.git'
+Bundle 'https://github.com/wting/rust.vim'
+Bundle 'chase/vim-ansible-yaml'
+"Bundle 'https://github.com/fatih/molokai.git'
+Bundle 'https://github.com/tomasr/molokai.git'
+Bundle 'https://github.com/fatih/vim-go.git'
+Bundle 'https://github.com/Valloric/YouCompleteMe.git'
 "Bundle 'https://github.com/vim-scripts/aftersyntaxc.vim.git'
 
+let g:molokai_original = 1
+"let g:rehash256 = 1
 "let g:solarized_termcolors=256
 "colorscheme jellybeans
-colorscheme solarized
-set background=dark
+"colorscheme solarized
+colorscheme molokai
+"set background=dark
 
 filetype plugin indent on
 
@@ -93,6 +103,10 @@ map ,tn :tabnew<CR>
 map ,tc :tabclose<CR>
 map ,tl :tabp<CR>
 map ,tr :tabn<CR>
+
+map ,ji :JavaImport<CR>
+map ,jio :JavaImportOrganize<CR>
+map ,jim :JavaImpl<CR>
 
 "Rename tabs to show tab# and # of viewports
 if exists("+showtabline")
@@ -161,3 +175,8 @@ let g:gist_open_browser_after_post = 1
 map <leader>gs :InsertBothGetterSetter<CR>
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:EclimCompletionMethod = 'omnifunc'
